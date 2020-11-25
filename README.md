@@ -4,6 +4,8 @@ Simple plugin for responsive dev.
 
 The plugin adds a small element with the actual dimensions of the browser window
 
+![img](https://github.com/hqdrone/wSizes/blob/main/dist/img/img.jpg)
+
 For the correct work on mobile devices, plugin adds a meta tag with the necessary parameters to prevent scaling
 
 ## Installation and use
