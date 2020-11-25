@@ -31,8 +31,11 @@ For the correct work on mobile devices, plugin adds a meta tag with the necessar
 ```
 
 **Window Width** - full window width including the width of the vertical scroll bar
+
 **Window Height** - full window height including the height of the horizontal scroll bar
+
 **Content Width** - window width excluding the width of the vertical scroll bar
+
 **Content Height** - window height excluding the height of the horizontal scroll bar
 
 ---
