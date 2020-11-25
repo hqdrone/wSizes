@@ -11,6 +11,7 @@ window.onload = () => { // Страница загружена включая и
 		wSize.style.cssText = `
 			padding: 5px;
 			background: #000;
+			opacity: .5;
 			position: fixed;
 			right: 0;
 			bottom: 0;
@@ -22,9 +23,14 @@ window.onload = () => { // Страница загружена включая и
 		document.body.append(wSize) // добавляем созданный элемент meta перед закрывающим тегом </body>
 
 		const wResize = () => { // объявляем функцию wResize
-			wWidth = document.documentElement.clientWidth // узнаем ширину окна без полосы прокрутки
-			wHeight = document.documentElement.clientHeight // узнаем высоту окна без полосы прокрутки
-			wSize.innerText = `W: ${wWidth}px H: ${wHeight}px` // вставляем значения ширины и высоты в элемент wSize
+			windowWidth = window.innerWidth // узнаем ширину окна c полосой прокрутки
+			windowHeight = window.innerHeight // узнаем высоту окна c полосой прокрутки
+			contentWidth = document.documentElement.clientWidth // узнаем ширину контентной части без полосы прокрутки
+			contentHeight = document.documentElement.clientHeight // узнаем высоту контентной части без полосы прокрутки
+			wSize.innerText = `Window Width: ${windowWidth}px
+				Window Height: ${windowHeight}px
+				Content Width: ${contentWidth}px
+				Content Height: ${contentHeight}px` // вставляем значения в элемент wSize
 		}
 		wResize() // вызываем функцию wResize
 		window.addEventListener('resize', wResize) // вызывем функцию wResize при изменении размеров окна браузера
