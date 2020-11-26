@@ -1,13 +1,13 @@
-window.onload = () => { // Страница загружена включая изображение, стили и тд
-	const wSizes = () => { // Объявляем основную функцию wSizes
+window.onload = () => {
+	const wSizes = () => {
 
-		const meta = document.createElement('meta') // создаем элемент meta
-		meta.setAttribute('name', 'viewport') // добавляем элементу meta атрибут name="viewport"
-		meta.setAttribute('content', 'width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no, shrink-to-fit=no"') // добавляем элементу meta атрибут для корректной работы плагина на мобильных устройствах
-		document.getElementsByTagName('head')[0].append(meta); // добавляем созданный элемент meta перед закрывающим тегом </head>
+		const meta = document.createElement('meta')
+		meta.setAttribute('name', 'viewport')
+		meta.setAttribute('content', 'width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no, shrink-to-fit=no"')
+		document.getElementsByTagName('head')[0].append(meta);
 
-		const wSize = document.createElement('div') // создаем элемент wSize
-		wSize.className = 'w-size' // добавляем класс w-size
+		const wSize = document.createElement('div')
+		wSize.className = 'w-size'
 		wSize.style.cssText = `
 			padding: 5px;
 			background: #000;
@@ -19,22 +19,22 @@ window.onload = () => { // Страница загружена включая и
 			color: #fff;
 			font-size: 12px;
 			border-radius: 3px;
-		` // добавляем инлайн стили
-		document.body.append(wSize) // добавляем созданный элемент meta перед закрывающим тегом </body>
+		`
+		document.body.append(wSize)
 
-		const wResize = () => { // объявляем функцию wResize
-			windowWidth = window.innerWidth // узнаем ширину окна c полосой прокрутки
-			windowHeight = window.innerHeight // узнаем высоту окна c полосой прокрутки
-			contentWidth = document.documentElement.clientWidth // узнаем ширину контентной части без полосы прокрутки
-			contentHeight = document.documentElement.clientHeight // узнаем высоту контентной части без полосы прокрутки
+		const wResize = () => {
+			windowWidth = window.innerWidth
+			windowHeight = window.innerHeight
+			contentWidth = document.documentElement.clientWidth
+			contentHeight = document.documentElement.clientHeight
 			wSize.innerHTML = `Window Width: ${windowWidth}px<br>
 				Window Height: ${windowHeight}px<br>
 				Content Width: ${contentWidth}px<br>
-				Content Height: ${contentHeight}px` // вставляем значения в элемент wSize
+				Content Height: ${contentHeight}px`
 		}
-		wResize() // вызываем функцию wResize
-		window.addEventListener('resize', wResize) // вызывем функцию wResize при изменении размеров окна браузера
+		wResize()
+		window.addEventListener('resize', wResize)
 	}
 
-	wSizes() // Вызываем основную функцию wSizes
+	wSizes()
 }
