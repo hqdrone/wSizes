@@ -27,9 +27,9 @@ window.onload = () => { // Страница загружена включая и
 			windowHeight = window.innerHeight // узнаем высоту окна c полосой прокрутки
 			contentWidth = document.documentElement.clientWidth // узнаем ширину контентной части без полосы прокрутки
 			contentHeight = document.documentElement.clientHeight // узнаем высоту контентной части без полосы прокрутки
-			wSize.innerText = `Window Width: ${windowWidth}px
-				Window Height: ${windowHeight}px
-				Content Width: ${contentWidth}px
+			wSize.innerHTML = `Window Width: ${windowWidth}px<br>
+				Window Height: ${windowHeight}px<br>
+				Content Width: ${contentWidth}px<br>
 				Content Height: ${contentHeight}px` // вставляем значения в элемент wSize
 		}
 		wResize() // вызываем функцию wResize
